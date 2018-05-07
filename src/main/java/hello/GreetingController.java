@@ -24,5 +24,11 @@ public class GreetingController {
         return new Addition(a1, a2);
     }
     
+    @RequestMapping("/subtract")
+    public Subtraktion subtract(@RequestParam(value="a1", defaultValue="0") long a1, 
+    		@RequestParam(value="a2", defaultValue="0") long a2) {
+        return new Subtraktion(a1, a2);
+    }
+    
     
 }
