@@ -17,4 +17,12 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
+    
+    @RequestMapping("/addition")
+    public Addition sum(@RequestParam(value="a1", defaultValue="0") long a1, 
+    		@RequestParam(value="a2", defaultValue="0") long a2) {
+        return new Addition(a1, a2);
+    }
+    
+    
 }
